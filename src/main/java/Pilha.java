@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.EmptyStackException;
 import java.util.List;
 
 public class Pilha<T> {
@@ -14,5 +15,14 @@ public class Pilha<T> {
     public void push(T elemento) {
         elementos.add(elemento);
         tamanho++;
+    }
+    public T pop() {
+        if (isEmpty()) {
+            throw new EmptyStackException();
+        }
+        T elemento = elementos.get(tamanho - 1);
+        elementos.remove(tamanho - 1);
+        tamanho--;
+        return elemento;
     }
 }
