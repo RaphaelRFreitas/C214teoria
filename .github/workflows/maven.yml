@@ -25,7 +25,6 @@ jobs:
 
       - name: Teste com maven
         run: |
-          cd src
           mvn clean test site
       - name: Upload artefatos de teste
         uses: actions/upload-artifact@v2
@@ -48,7 +47,6 @@ jobs:
 
       - name: Build com maven
         run: |
-          cd src
           mvn clean install
       - name: Upload artefatos de build
         uses: actions/upload-artifact@v3
