@@ -39,4 +39,15 @@ public class PilhaTeste {
         Pilha<Integer> pilha = new Pilha<Integer>();
         pilha.pop();
     }
+
+    @Test
+    public void testePushPop() {
+        Pilha<Integer> pilha = new Pilha<Integer>();
+        pilha.push(1);
+        pilha.push(2);
+        assert pilha.pop() == 2;
+        assert pilha.pop() == 1;
+        assert pilha.isEmpty();
+        assert pilha.size() == 0;
+    }
 }
