@@ -6,6 +6,8 @@ public class TesteEmptyStack {
     public void testEmptyStackException()
     {
         Stack s<Integer > = new Stack<Integer>();
+        s.push(1);
+        s.pop();
         s.pop();
     }
 }
